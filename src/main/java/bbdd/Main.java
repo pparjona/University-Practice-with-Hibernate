@@ -54,7 +54,41 @@ public class Main
         // recorrerlo usando CSVParser para crear los pasajeros, entretenimientos y gastos que
         // en él se encuentran. Dichos gastos deberán ser asignados al pasajero/a y al entretenimiento 
         // correspondientes. Se deben guardar todos estos datos en la base de datos.
-        
+
+        //Si el reader da problemas en encontrar el .csv usar una ruta absoluta
+        try (Reader reader = Files.newBufferedReader(Paths.get("resources/gastos.csv"));
+             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withHeader())) {
+
+            session.beginTransaction();
+
+            for (CSVRecord record : csvParser) {
+                String pasajeroNombre = record.get("pasajero");
+                String entretenimientoNombre = record.get("entretenimiento");
+                int cantidad = Integer.parseInt(record.get("cantidad"));
+
+                // Crear directamente pasajero y entretenimiento
+                Pasajero pasajero = new Pasajero(pasajeroNombre);
+                Entretenimiento entretenimiento = new Entretenimiento(entretenimientoNombre);
+
+                // Crea el gasto
+                Gasto gasto = new Gasto(pasajero, entretenimiento, cantidad);
+
+                // Asocia el gasto
+                pasajero.getGastos().add(gasto);
+                entretenimiento.getGastos().add(gasto);
+
+                // Guardar en BBDD
+                session.save(pasajero);
+                session.save(entretenimiento);
+                session.save(gasto);
+            }
+
+            session.getTransaction().commit();
+        //Para atrapar los problemas con el fichero(busqueda, lectura...)
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo CSV: " + e.getMessage());
+            e.printStackTrace();
+        }
 
 
         session.close();
