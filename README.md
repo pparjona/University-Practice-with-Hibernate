@@ -4,7 +4,7 @@
 
 University project done during the 2024 - 2025 Database course.
 
-Its a simple project using hibernate, made with classmates.
+Designed and implemented the database schema and core logic for a university project using Hibernate ORM. Developed CRUD operations in Java to manage records and integrated SQL queries for data manipulation. All with the help of my classmates.
 
 To run and check:
 
@@ -23,7 +23,7 @@ In case of errors you can modify these lines of "hibernate.cfg.xml":
 
 Proyecto de la universidad hecho durante el curso 2024 - 2025 de Bases de datos.
 
-Es un proyecto simple usando hibernate que hice con compañeros de clase.
+Diseñé e implementé el esquema de la base de datos y la lógica principal para un proyecto universitario utilizando Hibernate ORM. Desarrollé operaciones CRUD en Java para gestionar registros e integré consultas SQL para la manipulación de datos. Todo con ayuda de mis compañeros.
 
 Para ejecutar y comprobar:
 
