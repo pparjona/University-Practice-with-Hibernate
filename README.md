@@ -4,7 +4,8 @@
 
 University project done during the 2024 - 2025 Database course.
 
-Designed and implemented the database schema and core logic for a university project using Hibernate ORM. Developed CRUD operations in Java to manage records and integrated SQL queries for data manipulation. All with the help of my classmates.
+Java, Hibernate ORM, SQL, Apache Commons CSV – Team Project
+Developed a Java application using Hibernate ORM to manage relational data via entity mapping. Implemented entities for passengers, entertainment, and expenses, and programmed transactional persistence using Hibernate Sessions. Extended functionality to read external CSV data using Apache Commons CSV, parsing rows to dynamically create and associate entities with proper relationships, then storing all records in the database. Focused on robust file handling, error management, and efficient batch data insertion. All with the help of my classmates.
 
 To run and check:
 
@@ -23,7 +24,8 @@ In case of errors you can modify these lines of "hibernate.cfg.xml":
 
 Proyecto de la universidad hecho durante el curso 2024 - 2025 de Bases de datos.
 
-Diseñé e implementé el esquema de la base de datos y la lógica principal para un proyecto universitario utilizando Hibernate ORM. Desarrollé operaciones CRUD en Java para gestionar registros e integré consultas SQL para la manipulación de datos. Todo con ayuda de mis compañeros.
+Java, Hibernate ORM, SQL, Apache Commons CSV – Proyecto en Equipo
+Desarrollé una aplicación en Java utilizando Hibernate ORM para gestionar datos relacionales a través del mapeo de entidades. Implementé entidades para pasajeros, entretenimiento y gastos, y programé la persistencia transaccional usando Hibernate Sessions. Amplié la funcionalidad para leer datos externos desde CSV utilizando Apache Commons CSV, analizando filas para crear y asociar entidades dinámicamente con las relaciones adecuadas, y luego almacenando todos los registros en la base de datos. Me enfoqué en un manejo robusto de archivos, gestión de errores y una inserción eficiente de datos por lotes. Todo con ayuda de mis compañeros.
 
 Para ejecutar y comprobar:
 
